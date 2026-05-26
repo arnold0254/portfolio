@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chat Interface — Arnold Orina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <span class="logo-icon">🤖</span>
+          <h3>Orina.AI</h3>
+        </div>
+        <button class="new-chat-btn" id="newChatBtn">
+          <span>+</span> New Chat
+        </button>
+      </div>
+
+      <div class="chat-history">
+        <span class="history-label">Recent Chats</span>
+        <ul class="history-list" id="historyList">
+          <li class="history-item active">
+            <span class="chat-icon">💬</span>
+            <span class="chat-title">Designing database schema...</span>
+          </li>
+          <li class="history-item">
+            <span class="chat-icon">💬</span>
+            <span class="chat-title">Node.js Express JWT Auth</span>
+          </li>
+          <li class="history-item">
+            <span class="chat-icon">💬</span>
+            <span class="chat-title">CSS Grid vs Flexbox guide</span>
+          </li>
+          <li class="history-item">
+            <span class="chat-icon">💬</span>
+            <span class="chat-title">React state optimization tips</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="profile-pic">A</div>
+          <div class="profile-info">
+            <h4>Arnold Orina</h4>
+            <span>orinaarnold886@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Workspace -->
+    <main class="chat-workspace">
+      <!-- Chat Header -->
+      <header class="chat-header">
+        <div class="model-selector">
+          <span class="model-badge">GPT-4o</span>
+          <span class="model-status">Online</span>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Settings">⚙️</button>
+          <button class="icon-btn" aria-label="Share">🔗</button>
+        </div>
+      </header>
+
+      <!-- Message Container -->
+      <div class="messages-container" id="messagesContainer">
+        <!-- AI Greeting -->
+        <div class="message ai-message">
+          <div class="message-avatar">🤖</div>
+          <div class="message-content">
+            <p>Hello Arnold! I'm your advanced AI assistant. How can I help you build or debug something amazing today?</p>
+            <div class="suggestion-chips">
+              <button class="chip">Write a REST API routing structure</button>
+              <button class="chip">Explain React performance tips</button>
+              <button class="chip">Write beautiful Tailwind components</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input Area -->
+      <footer class="chat-input-area">
+        <form class="input-form" id="chatForm">
+          <div class="input-wrapper">
+            <textarea id="chatInput" rows="1" placeholder="Type a message or ask for code..."></textarea>
+            <div class="input-actions">
+              <button type="button" class="action-btn" title="Upload File">📎</button>
+              <button type="button" class="action-btn" title="Voice Input">🎙️</button>
+              <button type="submit" class="send-btn" id="sendBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        <p class="input-disclaimer">Orina.AI may display inaccurate info, so double-check code snippets.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

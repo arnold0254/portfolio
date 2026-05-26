@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+build/
+*.log
+
+# Keep APK if wanted, but standard ignores
+# app-debug[1].apk
