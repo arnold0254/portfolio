@@ -457,6 +457,12 @@ a { text-decoration: none; color: inherit; }
   border-radius: 50%;
   border: 4px solid white;
   box-shadow: var(--shadow-xl);
+  
+  /* Prevent browser blurring and enable hardware acceleration */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .tech-float {
